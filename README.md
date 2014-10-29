@@ -1,4 +1,4 @@
 HackerNewsReader
 ================
 
-Hacker news reader - angular js example
+Simple example of a news reader making the comunication with three different endpoints.
