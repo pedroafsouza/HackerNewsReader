@@ -31,22 +31,20 @@
          <script src="app/services/hackerService.js"></script>
          <script src="app/controllers/hackerCtrl.js"></script>
       </head>
-      <body ng-controller="hackerCtrl">
-  <div id="bg">
-  <img src="assets/img/bg.jpg" alt="">
-</div>
+      <body ng-controller="hackerCtrl" class="app-background">
+ 
          <div class="container">
             <div class="row vertical-center-row" ng-hide="isLoading">
                <div class="list-group">
                   <a href="#" class="list-group-item" style="min-height:110px;"  ng-click="openLink(item)" ng-class="{active: item==selectedItem}" ng-repeat="item in news | orderBy:'score':true">
                      <h4 class="list-group-item-heading">{{item.title}}</h4>
                      <p class="list-group-item-text">
-                     <div class="col-md-3"><b>Create</b>{{item.time |date:"h:mma"}}</div>
-                     <div class="col-md-3"><b>Score</b>{{item.score}}</div>
-                     <div class="col-md-6"><b>Url</b>{{item.url}}</div>
-                     <div class="col-md-12" ng-show="item.text"><b>Text</b>{{item.text}}</div>
-                     <div class="col-md-6" ><b>user</b>{{item.user.id}}</div>
-                     <div class="col-md-6"  ><b>Karma</b>{{item.user.karma}}</div>
+                     <div class="col-md-3"><b>Create</b> {{item.time |date:"h:mma"}}</div>
+                     <div class="col-md-3"><b>Score</b> {{item.score}}</div>
+                     <div class="col-md-6"><b>Url</b> {{item.url}}</div>
+                     <div class="col-md-12" ng-show="item.text"><b>Text</b> {{item.text}}</div>
+                     <div class="col-md-6" ><b>user</b> {{item.user.id}}</div>
+                     <div class="col-md-6"  ><b>Karma</b> {{item.user.karma}}</div>
                      </p>
                   </a>
                </div>
